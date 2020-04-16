@@ -20,20 +20,11 @@ def merge( arrA, arrB ):
 
     return merged_arr
 
-list = [17, 19, 13, 9, 6, 18, 1, 5, 10, 8]
-list2 = [14, 7, 15, 12, 9, 19, 4, 5, 6, 17]
-
-print(list + list2)
-print(merge(list, list2))
-
-
-
-
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     if len(arr) > 1:
-        L = merge_sort(arr[0:int(len(arr) / 2)])
-        R = merge_sort(arr[int(len(arr) / 2):])
+        L = merge_sort(arr[0:len(arr) // 2])
+        R = merge_sort(arr[len(arr) // 2:])
         arr = merge(L, R)
     return arr
 
